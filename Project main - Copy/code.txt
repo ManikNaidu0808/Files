@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project HTML and CSS</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        /* background-color: aqua; */
+        width: 60%;
+        margin: auto;
+        height: 10vh;
+      }
+      .navbar img {
+        width: 250px;
+        height: 60px;
+        margin: auto;
+      }
+      .nav-list {
+        display: flex;
+        justify-content: space-evenly;
+        list-style: none;
+        width: 70%;
+        margin: auto;
+        font-size: 15px;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .nav-list li {
+        padding: 10px;
+        position: relative;
+      }
+      .nav-list li:hover {
+        color: #2f5aae;
+        cursor: pointer;
+      }
+      .nav-list li:after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 10%;
+        width: 0;
+        height: 2px;
+        transform: translate(-50%, -50%);
+        background-color: #2f5aae;
+        transition: width 0.9s ease;
+      }
+      .nav-list li:hover::after {
+        width: 100%;
+      }
+
+      .carousel {
+        position: relative;
+        width: 100%;
+        height: 15cm;
+        overflow: hidden;
+      }
+
+      .carousel-inner {
+        display: flex;
+        width: 400%;
+        animation: slide 16s infinite;
+      }
+
+      .carousel-item {
+        width: 25%;
+        flex-shrink: 0;
+        position: relative;
+        display: flex;
+        justify-content: center;
+      }
+
+      .carousel-item p {
+        position: absolute;
+        font-size: 40px;
+        color: white;
+        text-align: center;
+      }
+      .carousel-item img {
+        width: 100%;
+        display: block;
+      }
+
+      @keyframes slide {
+        0% {
+          transform: translateX(0%);
+        }
+        20% {
+          transform: translateX(0%);
+        }
+        25% {
+          transform: translateX(-25%);
+        }
+        45% {
+          transform: translateX(-25%);
+        }
+        50% {
+          transform: translateX(-50%);
+        }
+        70% {
+          transform: translateX(-50%);
+        }
+        75% {
+          transform: translateX(-75%);
+        }
+        95% {
+          transform: translateX(-75%);
+        }
+        100% {
+          transform: translateX(0%);
+        }
+      }
+
+      .container1 {
+        /* background-color: aquamarine; */
+        height: 15cm;
+        width: 80%;
+        margin: auto;
+        margin-top: 100px;
+        display: flex;
+        flex-wrap: nowrap;
+      }
+      .container1-img img {
+        width: 700px;
+        height: 450px;
+        margin-top: 70px;
+      }
+      .container1-content {
+        /* width: 100%; */
+        /* background-color: lightgreen; */
+        padding: 30px 90px;
+        position: relative;
+      }
+      .container1-animation {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        animation: slideIn 1s ease-out forwards;
+      }
+      @keyframes slideIn {
+        from {
+          transform: translateX(100%);
+          opacity: 0;
+        }
+        to {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+      .container1-content h1 {
+        font-size: 60px;
+        color: #313131;
+        font-weight: 600;
+        line-height: 75px;
+        margin-bottom: 20px;
+      }
+      .container1-content p {
+        width: 70%;
+        color: #000000;
+        font-family: "Poppins", Sans-serif;
+        font-size: 15px;
+        font-weight: 400;
+        text-transform: none;
+        line-height: 27px;
+        margin-bottom: 30px;
+      }
+
+      .readmore {
+        font-family: "Poppins", Sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 50px;
+        color: #ffffff;
+        background-color: #1a237e;
+        border-radius: 30px 30px 30px 30px;
+        padding: 0px 40px 0px 40px;
+        display: inline-block;
+        margin: 25px 0px;
+        /* flex-grow: 1; */
+        /* order: 10; */
+      }
+      .gradient-line {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 3px;
+        background: linear-gradient(
+          to right,
+          #fc5f45 0%,
+          #fc5f45 25%,
+          #38c695 25%,
+          #38c695 50%,
+          #b27cf5 50%,
+          #b27cf5 75%,
+          #feb960 75%,
+          #feb960 100%
+        );
+        animation: slideLine 1s ease-out forwards;
+      }
+
+      .container2 {
+        height: auto;
+        /* background-color: #38c695; */
+      }
+      .ourServices {
+        /* background-color: #38c695; */
+        width: 70%;
+        margin: auto;
+        margin-bottom: 40px;
+        text-align: center;
+      }
+      .ourServices h1 {
+        font-size: 50px;
+        margin-top: 40px;
+      }
+      .ourServices p {
+        font-size: 20px;
+        margin-top: 40px;
+      }
+
+      .cardsAnimation {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        width: 70%;
+        height: 600px;
+        flex-wrap: wrap;
+      }
+      .card {
+        width: 350px;
+        height: 500px;
+        background-color: rgb(240, 233, 233);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+        margin: 0 20px 20px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        position: relative;
+      }
+      .card img {
+        width: 100px;
+        height: 80px;
+        object-fit: fill;
+      }
+      .card > div,
+      .card > img {
+        margin-bottom: 20px;
+      }
+      /* .cardsAnimation {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 65vh;
+      } */
+
+      .cardheading {
+        margin-bottom: 20px;
+        color: #313131;
+        font-family: "Poppins", Sans-serif;
+        font-size: 25px;
+        font-weight: 500;
+        height: 50px;
+      }
+      .cardPara {
+        font-size: 15px;
+        font-family: "Poppins", Sans-serif;
+        line-height: 27px;
+        letter-spacing: 0.7px;
+        height: 140px;
+      }
+      .red-line::after {
+        content: "";
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        /* left: 0; */
+        height: 4px;
+        background: linear-gradient(to right, #fc5f45 0%, #fc5f45 100%);
+      }
+      .yellow-line::after {
+        content: "";
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        /* left: 0; */
+        height: 4px;
+        background: linear-gradient(to right, #feb960 0%, #feb960 100%);
+      }
+      .green-line::after {
+        content: "";
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        /* left: 0; */
+        height: 4px;
+        background: linear-gradient(to right, #38c695 0%, #38c695 100%);
+      }
+      .purple-line::after {
+        content: "";
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        /* left: 0; */
+        height: 4px;
+        background: linear-gradient(to right, #b27cf5 0%, #b27cf5 100%);
+      }
+
+      .container3 {
+        height: 60vh;
+        background-color: rgb(245, 199, 131);
+      }
+
+      .container4 {
+        height: 60vh;
+        text-align: center;
+        /* background-color: #38c695; */
+        width: 80%;
+        margin: auto;
+      }
+      .container4 h1 {
+        font-size: 55px;
+        line-height: 85px;
+        color: #313131;
+      }
+      .container4 p {
+        color: #616161;
+        font-family: "Poppins", Sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+        text-transform: none;
+        font-style: normal;
+        text-decoration: none;
+        line-height: 18px;
+        letter-spacing: 0px;
+        padding: 30px;
+      }
+      .technologyLogo{
+        width: 80%;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 20px;
+      }
+      .technologyLogo>img{
+        padding: 20px;
+        transition: transform 0.3s ease;
+        
+      }
+      .logo:hover{
+        transform: scale(1.12);
+      }
+
+      .container5{
+        background-color: #7595d5;
+        height: 15vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+      .container5 span,
+      .container5 a{
+        margin: 0 10px;
+      }
+      .container5 span{
+        font-size: 25px;
+      }
+
+
+    </style>
+  </head>
+  <body>
+    <div class="main-container">
+      <nav class="navbar">
+        <img src="ibzLogo.png" alt="Interbiz Logo" class="img-size" />
+        <ul class="nav-list">
+          <li>Home</li>
+          <li>About Us</li>
+          <li>Products</li>
+          <li>Services</li>
+          <li>Developer Patnerships</li>
+          <li>Blogs</li>
+          <li>Career</li>
+          <li>Contact Us</li>
+        </ul>
+      </nav>
+
+      <div class="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item">
+            <!-- <p>
+              Providing Integrated Technology Services Across Mobile, Web &
+              Cloud
+            </p> -->
+            <img src="collaborate.jpg" alt="Image 1" />
+          </div>
+          <div class="carousel-item">
+            <img src="cbg2.jpg" alt="Image 2" />
+          </div>
+          <div class="carousel-item">
+            <img src="RecruiterScreen.jpg" alt="Image 3" />
+          </div>
+          <div class="carousel-item">
+            <img src="product-review-website-create-how-to.jpg" alt="Image 4" />
+          </div>
+        </div>
+      </div>
+
+      <div class="container1">
+        <div class="container1-img">
+          <img src="2ndContainer.jpg" />
+        </div>
+
+        <div class="container1-content container1-animation">
+          <h1>What Is Interbiz?</h1>
+          <p>
+            Interbiz Consulting is a boutique software development company
+            focused on using technology to automate and improve business
+            processes. Our agile approach to product development and launch
+            allows us to partner with our clients to provide economical and
+            easy-to-use solutions.
+          </p>
+          <br />
+          <p>
+            Our team takes pride in having helped clients successfully launch
+            their MVPs and scale while saving millions of dollars in software
+            development costs and reducing their time-to-market by over 35
+            percent.
+          </p>
+          <div><a class="readmore">Read More</a></div>
+          <div class="gradient-line"></div>
+        </div>
+      </div>
+
+      <div class="container2">
+        <div class="ourServices">
+          <h1>Our Services</h1>
+          <p>
+            Interbiz provides software development services for all industries
+            with a focus on healthcare services. Many innovations have propelled
+            the healthcare industry in the past several years. But even with
+            extensive advances, manual processes and redundancies remain that
+            adversely impact providers, patients, and their families. Interbiz
+            understands your needs and works with you to provide quality
+            outcomes.
+          </p>
+        </div>
+
+        <div class="cardsAnimation">
+          <div class="card red-line">
+            <img src="pwa.png" />
+            <div class="cardheading">Progressive Web Apps</div>
+            <div class="cardPara">
+              Reliable browsing with offline connectivity. New concept that
+              bridges the gap between websites and mobile apps. These apps
+              promise offline capabilities as well as improved speed and
+              performance.
+            </div>
+            <div><a class="readmore">Read More</a></div>
+          </div>
+
+          <div class="card yellow-line">
+            <img src="Cloud-Computing.jpg" />
+            <div class="cardheading">Cloud Computing</div>
+            <div class="cardPara">
+              Cloud computing is the delivery of computing services—including
+              servers, storage, databases, networking, software, analytics, and
+              intelligence—over the Internet .
+            </div>
+            <div><a class="readmore">Read More</a></div>
+          </div>
+
+          <div class="card green-line">
+            <img src="UIUX.png" />
+            <div class="cardheading">Progressive Web Apps</div>
+            <div class="cardPara">
+              Good design and the ability to pivot rapidly to meet consumer
+              demand are two important strategies to stay ahead of the
+              competition. Create innovative User Interfaces to deliver
+              professional, meaningful, and seamless experiences for your
+              clients.
+            </div>
+            <div><a class="readmore">Read More</a></div>
+          </div>
+
+          <div class="card purple-line">
+            <img src="saas.png" />
+            <div class="cardheading">SaaS Solutions</div>
+            <div class="cardPara">
+              Interbiz specializes in creating customized SaaS solutions, giving
+              our clients the ability to bring services to their target market
+              without the complexities of software and hardware management.
+            </div>
+            <div><a class="readmore">Read More</a></div>
+          </div>
+
+          <div class="card yellow-line">
+            <img src="ai.jpg" />
+            <div class="cardheading">Artificial Intelligence</div>
+            <div class="cardPara">
+              Artificial Intelligence is already successfully used to enhance
+              our productivity and expand our capabilities. Use AI to create
+              personalized experiences and increased efficiencies.
+            </div>
+            <div><a class="readmore">Read More</a></div>
+          </div>
+
+          <div class="card green-line">
+            <img src="Mobile.png" />
+            <div class="cardheading">Mobile First</div>
+            <div class="cardPara">
+              Today’s consumer uses their mobile device for light and heavy
+              tasks. Interbiz ensures your products and services translate
+              easily on mobile for a seamless user experience.
+            </div>
+            <div><a class="readmore">Read More</a></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container3">
+        <div></div>
+
+        <div></div>
+        <div></div>
+      </div>
+
+      <div class="container4">
+        <h1>We Work With</h1>
+
+        <p>
+          At Interbiz, we believe in creating the best client experience,
+          developing partnerships that go beyond transactional and embrace
+          collaboration.
+        </p>
+
+        <div class="technologyLogo">
+          <img class="logo" src="logo-csharp.jpg" alt="Csharp logo" width="250px" height="150px"/>
+          <img class="logo" src="angular.png" alt="Angular logo" width="250px" height="150px"/>
+          <img class="logo" src="ionicImage.png" alt="Iconic logo" width="250px" height="150px"/>
+          <img class="logo" src="Microsoft_Azure_Logo.png" alt="Asure logo" width="250px " height="150px"/>
+          <img class="logo" src="Cordova-1024x421.png" alt="Apache Cordova logo" width="250px" height="150px"/>
+          <img class="logo" src="androidImage.png" alt="Android logo" width="250px" height="150px"/>
+          <img class="logo" src="webapiImage.png" alt="WebApi logo" width="250px" height="150px"/>
+          <img class="logo" src="selenium.jpg" alt="Selenium logo" width="250px " height="150px"/>
+        </div>
+      </div>
+
+
+      <div class="container5">
+        <span>Start your journey with us now</span>
+        <a class="readmore">Get Started</a>
+      </div>
+
+      
+    </div>
+  </body>
+</html>
