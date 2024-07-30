@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CSS Cascading , Specificity ,Source Order and !important</title>
+    <style>
+      /* ====================================Element selector ====================================*/
+      p {
+        color: blue;
+      }
+      /* ======================================Class selector===================================== */
+      .special {
+        color: green;
+      }
+      /*========================================== ID selector=========================================== */
+      #unique {
+        color: red;
+      }
+      #unique {
+        color: rgb(113, 21, 162);
+      }
+      input[placeholder] {
+        background-color: #2d699e;
+      }
+      input[placeholder="Enter your email"] {
+        background-color: #d58acb;
+      }
+      input[data-role="admin"] {
+        color: rgb(186, 142, 142);
+      }
+      a[href^="https"] {
+        text-decoration: none;
+      }
+      a[href^="mailto"] {
+        font-size: 50px;
+      }
+      input[placeholder^="Enter"] {
+        font-size: 30px;
+      }
+      input[placeholder="name"] {
+        font-weight: bold;
+      }
+      a[href~="example"] {
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="unique" class="special" style="color: yellow">
+      This is a paragraph.
+    </p>
+    <input type="text" placeholder="Enter your name" />
+    <input type="email" placeholder="Enter your email" />
+    <input type="text" data-role="admin" value="Admin User" />
+    <a href="https://example.com">interbiz Link</a><br />
+    <a href="mailto:example@example.com">Email Link</a>
+  </body>
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boz-Sizing</title>
+    <style>
+       
+        .main{
+            display: flex;
+            gap: 20px; 
+            justify-content: center;
+        }
+        .main2{
+            display: flex;
+            flex-direction: column;
+            gap: 20px; 
+            justify-content: center;
+        }
+        hr{
+            border: 2px dashed black;
+            margin:50px;
+        }
+        h1,h2{
+            display: flex;
+            justify-content: center; 
+            text-decoration: underline;
+        }
+        .container-1{
+            height: 300px;
+            width: 300px;
+            background-color: aquamarine;
+            box-sizing: border-box;
+            padding: 100px;
+            border: 2px solid black;
+            
+        }
+        .container-2{
+            height: 300px;
+            width: 300px;
+            background-color: burlywood;
+
+            padding: 100px;
+            border: 2px solid black;
+        }
+        ol{
+            background-color: yellow;
+            list-style-type: none;
+            height: 1com;
+            line-height: 1cm;
+           
+        }
+        ol li{
+            background-color: brown;
+            display: inline-block;
+        }
+        #green{
+            width: 45%;
+            margin: auto;
+            font-size: 30px;
+            color: green;
+        }
+        #red{
+            color: red;
+        }
+        #initial{
+            color:initial
+        }
+        #inherit{
+            color: inherit;
+        }
+       /* ======================================================================================== */
+       /* This for Position(static, relative, fixed, absolute, sticky) */
+
+       .a{
+        background-color: lightblue;
+       }
+       .b{
+        background-color: red;
+       }
+       .c{
+        background-color: green;
+       }
+       .d{
+        background-color: yellow;
+       }
+       .positions>div{
+        height: 2cm;
+        line-height: 2cm;
+        text-align: center;
+        font-size: 43px;
+        width: 80%;
+       }
+
+       /* ============================================================================================= */
+       .parent {
+            visibility: hidden;
+        }
+        .child-unset {
+            visibility: unset;
+        }
+        .child-initial {
+            visibility: initial;
+        }
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            border: 2px solid black;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1 >1. Box-sizing : Border Box</h1>
+        <div class="main">
+       
+            <p class="container-1">Lets together make Interbiz a better place to work
+                Box-sizing:Border-Box include here
+            </p>
+            <p class="container-2">Lets together make Interbiz a better place to work
+                Box-sizing:Border-Box not include here
+            </p>
+        </div>
+        <hr>
+        <!-- ============================================================================================ -->
+
+        <h1>2. Display(Inline, block, inline-block, none, initial)</h1>
+        <div>
+            <h2 style="text-decoration: underline;">This all are inline elements</h2>
+            <div >
+             <span style="background-color: yellow; display: block; height: 1cm; line-height: 1cm;">1. This is span element(Inline Element). I have taken display as block here and it is working as block level element</span>
+            </div><br>
+            <div>
+                <a  style="background-color: Red;">2. This is "a" tag</a>
+            </div><br>
+            <div>
+                <strong  style="background-color: blue; color: aliceblue; display: none;">3. This is strong tag</strong>
+            </div><br>
+            <div>
+                <i  style="background-color: rgb(239, 239, 180); color: black;">4. Thi is i tag</i>
+            </div><br>
+            <div>
+                <code  style="background-color: orange;">5. This is code tag</code>
+            </div><br>
+            <div>
+                <time  style="background-color: green">6. This is time tag</time>
+            </div><br>
+            <div>
+                <em  style="background-color: brown">7. This is em tag</em>
+            </div><br>
+            <div>
+                <output  style="background-color: violet">8. This is Output tag</output>
+            </div>
+        </div>
+        <h2>This all are Block level elements</h2>
+        <div>
+            <p style="background-color: green;height: 2cm; line-height: 2cm;">This is p tag</p>
+            <article style="background-color: rgb(41, 10, 67); color: aliceblue;">This article tag</article>
+            <h2 style="background-color: rgb(178, 230, 45);display: inline; ">This is h2 tag.
+            Here i have provided display:inline in block level element</h2>
+            <section style="background-color: rgb(32, 141, 195)">This is section tag</section>
+            <ol>
+                <li>Home</li>
+                <li>Contact</li>
+                <li>Solutions </li>
+                <li>Client</li>
+            </ol>
+        </div>
+
+        <!-- ============================================================================================ -->
+        <h2>Display initial , inherit</h2>
+        <div id="green">
+            Green - By defalut given color green <br>
+            <a href="" id="red">Link1 - Given color red</a><br>
+            <a href="" id="initial">Link2 - Given color initial. Initial will get back to default</a><br>
+            <a href="" id="inherit" >Link3 - Given color inherit. Inherit will take color from parent</a><br>
+        </div>
+<!-- =============================================================================================================== -->
+        <hr>
+        <h1>3. Position(static, relative, fixed, absolute, sticky)</h1>
+        <div class="positions" style="height: 10cm;">
+            <div class="a" style="position: sticky; top: 0;">HTML</div>
+            <div class="b" >CSS</div> <!-- style=" position:relative; left: 50px; top: 50px;" -->
+            <div class="c" >JAVASCRIPT</div> <!-- style=" position:absolute; top: 1cm;" it will take the page top ant ti div-->
+            <!-- <div class="d" >ANGULAR</div> -->
+        </div>
+    </div>
+    <!-- ======================================================================================================== -->
+    <hr>
+     <div class="parent"> <!--visibility: hidden; -->
+        <div class="box">Box A</div>
+        <div class="box">Box A</div>
+        <div class="box">Box A</div>
+        <div class="box child-unset">Box 1 (Unset)</div> <!-- visibility: unset; -->
+        <div class="box child-initial" >Box 2 (Initial)</div> <!--visibility: initial; -->
+    </div>
+    
+    <div class="box">Box 3</div>
+   
+</body>
+</html>

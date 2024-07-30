@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valid Example</title>
+    <style>
+        input[type="email"]:valid {
+            border-color: green;
+            
+        }
+        input:invalid {
+            border-color: red;
+        }
+        input[type="number"]:in-range {
+           color: green;
+        }
+        /* input[type="number"]:out-of-range {
+            background-color: rgb(102, 14, 14);
+        } */
+        input:required {
+            border-color: blue;
+        }
+        input:optional {
+            border-color: gray;
+        }
+        input:read-write {
+            background-color: rgb(200, 200, 164);
+        }
+        input:placeholder-shown {
+            border-color: yellowgreen;
+        }
+        input[type="checkbox"]:checked,
+        input[type="radio"]:checked {
+           display: none;
+        }
+          input::placeholder {
+            color: gray;
+            font-style: italic;
+        }
+        
+        input::selection {
+            background-color: yellow;
+            color: red;
+        }
+
+    </style>
+</head>
+<body>
+    <form>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required placeholder="Enter your name"><br>
+        <label for="nickname">Nickname (optional):</label>
+        <input type="text" id="nickname" name="nickname" placeholder="Enter email"><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br>
+        <label for="age">Age (18-30):</label>
+        <input type="number" id="age" name="age" min="18" max="30"><br>
+        
+        <label for="editable">Editable Input:</label>
+        <input type="text" id="editable" name="editable"><br>
+        
+        <label for="readonly">Read-Only Input:</label>
+        <input type="text" id="readonly" name="readonly" value="Cannot change this" readonly><br>
+
+        <label><input type="checkbox" name="option" value="1"> Option 1</label>
+        <label><input type="checkbox" name="option" value="2"> Option 2</label><br>
+        <label><input type="radio" name="choice" value="A"> Choice A</label>
+        <label><input type="radio" name="choice" value="B"> Choice B</label>
+    </form>
+</body>
+</html>

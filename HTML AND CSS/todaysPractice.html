@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navbar Target Example</title>
+  <style>
+    /* Basic styling for the navigation links */
+.nav-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  background-color: #f8f8f8;
+}
+
+.nav-list li a {
+  background: white;
+  color: black;
+  padding: 10px;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Hover effect */
+.nav-list li:hover a {
+  color: #2f5aae;
+  cursor: pointer;
+}
+
+/* Active state styling using :target */
+#about:target ~ .main-container .nav-list li a[href="#about"],
+#services:target ~ .main-container .nav-list li a[href="#services"],
+#contact:target ~ .main-container .nav-list li a[href="#contact"] {
+  background: #1df712;
+  color: black; /* Ensure text color remains black */
+}
+
+/* Adjust the scroll position */
+section {
+  scroll-margin-top: 60px; /* Adjust this value as needed */
+  padding-top: 20px; /* Optional: additional padding for better visibility */
+}
+
+/* Ensure the nav container is positioned properly */
+.main-container {
+  position: sticky;
+  top: 0;
+  background: white;
+  z-index: 1000;
+  border-bottom: 1px solid #ddd;
+}
+
+  </style>
+</head>
+<body>
+    <nav class="main-container">
+        <ul class="nav-list">
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <section id="about" class="container">
+        <div class="container-img">
+          <img src="2ndContainer.jpg" alt="About Us Image" />
+        </div>
+      </section>
+      <section id="services" class="container">
+        <div class="container-img">
+          <img src="servicesContainer.jpg" alt="Services Image" />
+        </div>
+      </section>
+      <section id="contact" class="container">
+        <div class="container-img">
+          <img src="contactContainer.jpg" alt="Contact Image" />
+        </div>
+      </section>
+</body>
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>:nth-last-child(n) Example</title>
+    <style>
+      /*========================================= first-child======================================= */
+      /* .first-child-example li:first-child{
+        background-color: aquamarine;
+        font-weight: bold;
+      } */
+
+      /*========================================= last-child======================================= */
+      /* li:last-child {
+        color: brown;
+      } */
+
+      /*========================================== nth-child =============================*/
+      /* li:nth-child(3n) {
+      color: red;
+    } */
+
+      /*=======================================nth-last-child(2n) =========================*/
+      /* selects every element that is the nth child, counting from the last child element. */
+      /* selects every second element, counting from the last child element. */
+      /* li:nth-last-child(2n) {
+      color: blue;
+    } */
+
+      /* ===================================Only-child============================================= */
+      /* p:only-child {
+      font-weight: bold;
+      color: red;
+    } */
+
+      /* ====================================first-of-type========================================== */
+      /* p:first-of-type {
+            color: blue;
+        } */
+
+      /* ====================================last-of-type========================================== */
+      /* p:last-of-type {
+        color: rgb(140, 16, 134);
+      } */
+
+      /* =====================================nth-of-type(n) =======================================*/
+      /* p:nth-of-type(2n) {
+        color: green;
+      } */
+
+      /* =====================================nth-last-of-type(n)=======================================*/
+      /* li:nth-last-of-type(2n) {
+            color: purple;
+        } */
+
+      /*====================================== only-of-type ===========================================*/
+      /* p:only-of-type {
+            font-style: italic;
+            font-size: 50px;
+            color: rebeccapurple;
+        } */
+
+      /*===================================== root==================================================== */
+      /* :root {
+        font-size: 30px;
+      } */
+
+      /*========================================empty==================================================== */
+      /* div:empty {
+      border: 1px dashed red;
+    } */
+
+      /*============================================= visited ===============================================*/
+      /* a:visited {
+      color:red;
+    } */
+
+      /*================================================ target============================================ */
+      /* .section {
+      padding: 20px;
+      margin-bottom: 20px;
+      background-color: #f0f0f0;
+      border: 1px solid #ccc;
+    }
+
+    .section:target {
+      background-color: green;
+    } */
+
+      /*=================== Style for elements that are focused only when the user is interacting via keyboard============ */
+      /* button:focus-visible {
+      outline: 4px solid blue;
+    } */
+
+      /* Style for the parent element when any of its descendants receive focus */
+      /* .container:focus-within {
+      border: 2px solid green;
+    } */
+
+      input:focus {
+        background-color: gray;
+        color: aliceblue;
+      }
+
+      .pseudoElement::after {
+        content: "[Intro]";
+        color: yellowgreen;
+        font-weight: bold;
+      }
+      p::first-line {
+            font-weight: bold;
+            color: burlywood;
+            font-size: 1.2em;
+        }
+      /* p::first-letter {
+        font-size: 2.5em;
+        color: red;
+        float: left;
+        margin-right: 0.1em;
+      } */
+    </style>
+  </head>
+  <body>
+    <a href="https://www.google.com">Visit Example</a>
+    <h2>Example of :nth-last-child(n) Pseudo-class</h2>
+    <h2>Example of :only-child Pseudo-class</h2>
+    <div>
+      <p>Paragraph 1 (Only child)</p>
+    </div>
+    <div>
+      <p>Paragraph 2</p>
+      <p>Paragraph 3</p>
+      <p>Paragraph 4</p>
+    </div>
+    <p class="pseudoElement">without div</p>
+    <p>without div</p>
+
+    <ul>
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+      <li>Item 4</li>
+      <li>Item 5</li>
+      <li>Item 6</li>
+      <li>Item 7</li>
+      <li>Item 8</li>
+      <li>Item 9</li>
+      <li>Item 10</li>
+      <li>Item 11</li>
+      <li>Item 12</li>
+      <li>Item 13</li>
+      <li>Item 14</li>
+      <li>Item 15</li>
+    </ul>
+    <button>Button 1</button>
+    <button>Button 2</button>
+    <button>Button 3</button>
+
+    <nav>
+      <ul>
+        <li><a href="#section1">Section 1</a></li>
+        <li><a href="#section2">Section 2</a></li>
+        <li><a href="#section3">Section 3</a></li>
+      </ul>
+    </nav>
+
+    <div id="section1" class="section">
+      <h2>Section 1</h2>
+      <p>This is the content of Section 1.</p>
+    </div>
+
+    <div id="section2" class="section">
+      <h2>Section 2</h2>
+      <p>This is the content of Section 2.</p>
+    </div>
+
+    <div id="section3" class="section">
+      <h2>Section 3</h2>
+      <p>This is the content of Section 3.</p>
+    </div>
+
+    <div class="container">
+      <div class="input-group">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" />
+      </div>
+      <div class="input-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" />
+      </div>
+    </div>
+    <div class="container">
+      <div class="input-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" />
+      </div>
+      <div class="input-group">
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" />
+      </div>
+    </div>
+    <div></div>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Effect</title>
+    <style>
+        .t{
+            width: 200px;
+            border: 1px solid black;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+        .div{
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            transition: width 2s, height 2s;
+        }
+        .div:hover{
+            width:300px;
+            height:300px;
+            text-justify:distribute ;
+        }
+    </style>
+</head>
+<body>
+    <center>
+    <h1>Text Overflow</h1>
+    <p class="t">Hello guys!! Welcome to Interbiz</p>
+    <p style="text-align: justify; text-justify: distribute;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum quo ipsam nihil ab enim suscipit! At incidunt adipisci sit tempore iure veritatis officiis nostrum ea, minima molestiae, dignissimos, fugiat aspernatur.</p>
+    </center>
+
+    <div class="div">
+
+    </div>
+</body>
+</html>

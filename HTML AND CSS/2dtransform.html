@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2D 3D Transformation</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        h1{
+            background-color: dodgerblue;
+            color: white;
+            text-align: center;
+        }
+        div{
+            height: 3cm;
+            width: 3cm;
+            border: 2px solid black;
+            text-align: center;
+            line-height: 3cm;
+            margin: 10px;
+            margin-left: 50%;
+            border-radius: 10px;
+        }
+        .a{
+            background-color: red;
+            transition: 2s;
+        }
+        .a:hover{
+            transform: rotate(360deg);
+            transition: 1s;
+        }
+        .b{
+            background-color: lightblue;
+            transition: 2s;
+        }
+        .b:hover{
+            transform: translate(5cm,2cm);
+            transition: 2s;
+        }
+        .c{
+            background-color: yellow;
+            transition: 2s;
+        }
+        .c:hover{
+            transform: scale(3,1);
+            transition: 2s;
+
+        }
+        .d{
+            background-color: green;
+            transition: 2s;
+        }
+        .d:hover{
+            transform:skew(20deg,40deg);
+            transition:2s;
+        }
+        .e{
+            background-color: orange;
+            transition: 2s;
+        }
+        .e:hover{
+            transform: rotateX(180deg);
+            transform: rotateY(180deg);
+            transition:2s;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>2D Transformation</h1>
+    <div class="a">Rotate 😀 </div>
+    <div class="b">Move 😣</div>
+    <div class="c">Stretch 🙄</div>
+    <div class="d">Wider 🤐</div>
+    <div class="e">3D 🤗</div>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Grid</title>
+    <style>
+        .container{
+            background-color: red;
+            height: 700px;
+            width: 900px;
+            display: grid;
+            grid-template-rows: 133px 133px 133px 133px;
+            grid-template-columns: 133px 133px 133px 133px;
+            grid-template-rows: repeat(3,1fr);
+            grid-template-columns: repeat(3,1fr);
+            row-gap: 12px;
+            column-gap: 12px;
+        }
+        .item{
+            background-color: aqua;
+            /* height: 122px;
+            width: 122px; */
+        }
+        .item1{
+            grid-column-start: 1;
+            grid-column-end: 4;
+        }
+        .inline-flex-container {
+            display: inline-flex;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+
+        .inline-flex-item {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            margin: 5px;
+            text-align: center;
+        }
+
+        .custom-list-item {
+            display: list-item;
+            list-style-type: square; 
+            margin-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <div class="custom-list">
+        <div class="custom-list-item">Item 1</div>
+        <div class="custom-list-item">Item 2</div>
+        <div class="custom-list-item">Item 3</div>
+    </div>
+
+    <div class="container">
+        <div class="item item1"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+    <div>
+        <p>This is some text before the inline-flex container.</p>
+    <div class="inline-flex-container">
+        <div class="inline-flex-item">Item 1</div>
+        <div class="inline-flex-item">Item 2</div>
+        <div class="inline-flex-item">Item 3</div>
+    </div>
+    <p>This is some text after the inline-flex container.</p>
+    </div>
+</body>
+</html>

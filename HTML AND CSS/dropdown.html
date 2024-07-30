@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style-type: none;
+            background-color: black;
+            color: aliceblue;
+        }
+        ul li{
+            display: inline-block;
+            padding: 10px;
+        }
+        ul li:hover{
+            background-color: green;
+            color: aliceblue;
+        } 
+        .dropdown{
+            display: none;
+        }  
+        ul li:hover .dropdown{
+            display: block;
+            position: absolute;
+            margin-left: -10px;
+            margin-top: 10px;
+        }
+        .dropdown ul li{
+            display: block;
+        }
+        .dropdown2{
+            display: none;
+        }
+        .dropdown ul li:hover .dropdown2{
+            display: block;
+            position: absolute;
+            margin-left: 87px;
+        }
+    </style>
+</head>
+<body>  
+    <div>
+        <ul>
+            <li>Home</li>
+            <li>About </li>
+            <li>Course
+                <div class="dropdown">
+                    <ul>
+                        <li>Keyboard</li>
+                        <li>Software 
+                            <div class="dropdown2">
+                                <ul>
+                                    <li>VS Code</li>
+                                    <li>Note Pad++</li>
+                                    <li>Linux</li>
+                                    <li>Windows</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>hardware</li>
+                        <li>Information</li>
+                    </ul>
+                </div>
+            </li>
+            <li>Contact</li>
+        </ul>
+    </div>
+    
+</body>
+</html>

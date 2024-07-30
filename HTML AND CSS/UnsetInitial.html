@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>understanding visibility -unset and initial</title>
+    <style>
+        .parent {
+            visibility: hidden;
+        }
+        .child-unset {
+            visibility: unset;
+            /* visibility: unse: This resets the visibility property to its inherited value if it is inheritable, otherwise it resets to its initial value.  */
+        }
+        .child-initial {
+            visibility: initial;
+            /* visibility: initial: This resets the visibility property to its initial value, which is visible. */
+        }
+        .box {
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+        }
+        .box-1{
+            background-color: red;
+            position: relative;
+            top: 20px;
+            z-index: -3;
+        }
+        .box-2{
+            background-color: green;
+            position: relative;
+            z-index: -2;
+        }
+        .box-3{
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+
+<div class="parent"><!-- Parent is hidden-->
+    <div class="box box-1  child-initial">Box 1 (Unset)</div>
+    <div class="box  box-2 child-initial">Box 2 (Initial)</div>
+    <!--box-2 is unset. IT behaves like inherit. Since the parent is hidden, box-2 will also be hidden. -->
+    <!-- box-2 z-index is greater than boz-1 so it will be on top -->
+    <div class="box  box-3 child-unset">Box 3 (Initial)</div>
+
+</div>
+
+<div class="box" style="background-color: rgb(22, 7, 107);">Box 4</div>
+ 
+
+</body>
+</html>
