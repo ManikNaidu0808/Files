@@ -1,0 +1,178 @@
+<!-- These are Conditional statements such as if-else and switch-case. 
+These statements allow the program to make decisions based on the evaluation of conditions. -->
+
+<!-- if-else statement is used to execute a block of code if a specified condition is true. If the condition evaluates to false, an alternative block of code can be executed. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        height: 50px;
+        width: 300px;
+        /* text-align: center; */
+      }
+      table {
+        width: 65%;
+        height: 100%;
+        margin: auto;
+        align-items: center;
+        justify-content: center;
+        text-align: justify;
+        font-size: 20px;
+      }
+      th {
+        text-align: center;
+      }
+      td {
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <th>Ternary Operator</th>
+        <th>if-else Statement</th>
+      </tr>
+      <tr>
+        <td>Syntax: condition ? valueIfTrue : valueIfFalse</td>
+        <td>
+          Syntax: if (condition) { code to execute if true } else { code to
+          execute if false }
+        </td>
+      </tr>
+      <tr>
+        <td>Short and concise way to write a simple if-else statement</td>
+        <td>More versatile, can be used for more complex conditions</td>
+      </tr>
+      <tr>
+        <td>
+          Best for simple conditions and when you only need to return one value
+        </td>
+        <td>
+          Can be used for multiple conditions and can execute different code
+          based on the outcome
+        </td>
+      </tr>
+      <tr>
+        <td>Limited to only one condition</td>
+        <td>Can handle multiple conditions</td>
+      </tr>
+      <tr>
+        <td>Limited to only one value return</td>
+        <td>Can handle multiple return values</td>
+      </tr>
+    </table>
+    <script>
+      // if-else statements are more flexible and can handle complex conditions
+      //   let temp = 25;
+      //   if (temp > 30) {
+      //     console.log("Its hot Outside");
+      //   } else {
+      //     console.log("Normal temp");
+      //   }
+
+      //   let temp1 = 27;
+      //   switch (true) {
+      //     case temp1 < 20:
+      //       console.log("temperature cold");
+      //       break;
+      //     case temp1 < 28:
+      //       console.log("Normal temp");
+      //       break;
+      //     default:
+      //         console.log("Temperature is high")
+      //   }
+
+      // switch-case statements are often used when there are multiple possible conditions to check against a single variable.
+      // let day = 'wednesday'
+      // switch(day){
+      //     case 'monday':
+      //         console.log("Today is monday")
+      //         break;
+      //     case 'tuesday':
+      //         console.log("Today is tuesday")
+      //         break;
+      //     case 'wednesday':
+      //         console.log('Today is wednesday')
+      //         break;
+      //     default:
+      //         console.log("Holiday")
+      // }
+
+      //   let today = new Date().getDay();
+      //   switch (today) {
+      //     case 0:
+      //       console.log("Sunday!");
+      //       break;
+      //     case 1:
+      //       console.log("Monday!");
+      //       break;
+      //     case 2:
+      //       console.log("Tuesday!");
+      //       break;
+      //     case 3:
+      //       console.log("Wednesday!");
+      //       break;
+      //     case 4:
+      //       console.log("Thursday!");
+      //       break;
+      //     case 5:
+      //       console.log("Friday!");
+      //       break;
+      //     case 6:
+      //       console.log("Saturday!");
+      //       break;
+      //   }
+
+    //   function fizzbuzz(num) {
+    //     switch (true) {
+    //       case num % 3 === 0 && num % 5 === 0:
+    //         return "fizzbuzz";
+    //       case num % 3 === 0:
+    //         return "fizz";
+    //       case num % 5 === 0:
+    //         return "buzz";
+    //     }
+    //   }
+    //   console.log(fizzbuzz(3));
+    //   console.log(fizzbuzz(5));
+    //   console.log(fizzbuzz(15));
+
+      // Else-If Statement
+      //   let time = 20
+      //   if (time < 10) {
+      //     console.log("Good morning.");
+      //   } else if (time < 20) {
+      //     console.log("Good day.");
+      //   } else {
+      //     console.log("Good evening.");
+      //   }
+
+      //Ternary Operator [condition ? valueIfTrue : valueIfFalse]
+      //   let age = 25;
+      //   let canDrink = age > 18 ? "Yes you can drink" : "No";
+      //   console.log(canDrink);
+
+      //   let score = 30;
+      //   let result = score > 40 ? "Pass" : "Fail";
+      //   console.log(result);
+
+      // const num =15
+      // const result = (num% 3===0 && num%5===0)?true:false;
+      // console.log(result);
+
+      // const age = 52;
+      // const result2 = age<18? 'underAge':age<65?"adult" :"old";
+      // console.log(result2)
+    </script>
+  </body>
+</html>

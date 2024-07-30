@@ -1,0 +1,38 @@
+JavaScript Introduction
+JavaScript is a high-level, interpreted programming language that is primarily used to create interactive effects within web browsers. It is one of the core technologies of the World Wide Web, alongside HTML and CSS.
+
+When It Was Formed
+JavaScript was created in 1995 by Brendan Eich(an American technologist and programmer) while he was working at Netscape Communications Corporation. It was originally developed in just 10 days, and its initial purpose was to serve as a lightweight scripting language to handle basic tasks within web pages.
+
+Latest Version
+As of June 2024, the latest official version of JavaScript is ECMAScript 2023 (ES14). ECMAScript is the standard upon which JavaScript is based, and it is maintained by the Ecma International standards organization. New versions of ECMAScript are released annually, and ECMAScript 2023 includes several new features and improvements to the language.
+
+
+Variable - var
+Introduced: JavaScript 1.0 (1995)
+Scope: Function scope or globally scoped if not inside a function.
+Hoisting: Variables declared with var are hoisted to the top of their scope and initialized with undefined.
+                console.log(x); // undefined
+                var x = 5;
+                console.log(x); // 5
+
+
+Variable - let 
+Introduced: ECMAScript 2015 (ES6), officially released in June 2015.
+Scope: Block scope, meaning the variable is only available within the nearest enclosing block (including for loops and if statements).
+Hoisting: Variables declared with let are hoisted to the top of their block, but are not initialized. Accessing them before the declaration results in a ReferenceError.
+                console.log(y); // ReferenceError: y is not defined
+                let y = 10;
+                console.log(y); // 10
+
+
+Variable - const
+Introduced: ECMAScript 2015 (ES6), officially released in June 2015.
+Scope: Block scope, similar to let.
+Hoisting: Variables declared with const are hoisted to the top of their block, but are not initialized. Accessing them before the declaration results in a ReferenceError.
+Immutability: The value assigned to a const variable cannot be changed through reassignment, although if the value is an object, the object's properties can still be modified.
+                console.log(z); // ReferenceError: z is not defined
+                const z = 15;
+                console.log(z); // 15
+                z = 20; // TypeError: Assignment to constant variable.
+Variables declared with const cannot be reassigned, their properties can be updated if they are objects or arrays. 

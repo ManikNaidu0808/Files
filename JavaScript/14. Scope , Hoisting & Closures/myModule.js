@@ -1,0 +1,1 @@
+export const moduleVar = "I am a module variable from myModule.js file";

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS DOM Elements</title>
+    <style>
+      .box {
+        width: 200px;
+        height: 200px;
+        background-color: aquamarine;
+        margin: 20px;
+        text-align: center;
+        line-height: 100px;
+        margin: auto;
+        font-size: 25px;
+
+      }
+      table,td{
+            border: 1px solid black;
+            border-collapse:collapse;
+            width:50%;
+            text-align: center;
+            margin: auto;
+            align-items: center;
+            justify-content: center;
+        }
+        #myIdClass , #myId ,#myTagId , #myQuerySelectorId ,#myform ,#idTextChange ,#date ,#idChangeColor ,#dateTime{
+          color: red;
+          font-size: 20px;
+        }
+    #outer {
+    width: 400px;
+    height: 400px;
+    margin: 0 auto;
+    background-color: blueviolet;
+    position: relative;
+    font-size: 30px;
+}
+
+#inner {
+    width: 200px;
+    height: 200px;
+    background-color: orange;
+    margin: 100px;
+    position: absolute;
+}
+    </style>
+  </head>
+  <body>
+    <!-- <div style="border: 2px solid black;">
+      <h1>Fruits</h1>
+      <ul>
+        <li>Apple</li>
+        <li>Banana</li>
+        <li>Litchi</li>
+      </ul>
+    </div>
+    <h2 style="visibility: hidden;">old heading</h2>
+    
+    <section class="box">Div 1</section>
+    <section class="box">Div 2</section>
+    <section class="box">Div 3</section>
+
+    <h3>Remove Heading</h3> -->
+
+    <!-- =====================================================================-->
+    <!-- getElementByID -->
+    <table>
+      <tr>
+        <td>
+        <h1 id="intro">Finding HTML <span>test text</span> Element by ID</h1>
+        <p>This example demonstrate the <b>getElementByID</b> method</p>
+        <p id="myId"></p>
+      </td> 
+      </tr>
+    <!-- ========================================================================= -->
+    <!-- getElementsByClassName -->
+     <tr>
+      <td>    
+        <h1 >Finding HTML Element by Class</h1>
+        <p class="myclass">Hello Interbiz :- </p>
+        <p class="myclass">This example demonstrate the <b>getElementsByClassName</b> method</p>
+        <p id="myIdClass"></p>
+      </td>
+     </tr>
+    <!-- ========================================================================= -->
+    <!-- getElementsByTagName -->
+    <tr>
+      <td>
+        <h1>Finding HTML Element by Tag Name</h1>
+        <section>This example demonstrate the <b>getElementsByTagName</b> method</section>
+        <p id="myTagId"></p>
+      </td>
+     </tr>
+<!-- ========================================================================= -->
+    <!-- document.querySelector & document.querySelectorAll --> 
+    <tr>
+      <td>
+        <h1>Finding HTML Elements by Query Selector</h1>
+        <p class="myQuerySelectorClass">Hello Interbiz!.</p>
+        <p class="myQuerySelectorClass">This example demonstrates the <b>querySelectorAll</b> method.</p>
+        <p id="myQuerySelectorId"></p>
+      </td>
+     </tr>
+<!-- ========================================================================= -->
+<!-- Finding HTML Elements by HTML Object Collections -->
+ <tr>
+  <td>
+    <form id="frm" #form>
+      First name: <input type="text" name="fname" value="Manik"><br>
+      Last name: <input type="text" name="lname" value="Naidu"><br><br>
+      <input type="submit" value="Submit" onsubmit="submit(form)">
+    </form> 
+    <p id="myform"></p>
+  </td>
+ </tr>
+<!-- ========================================================================= -->
+<!-- Changing HTML Content & Changing the Value of an Attribute -->
+ <tr>
+  <td>
+    <h1>Changing HTML Content</h1>
+    <p id="idTextChange">I am going to change the content</p>
+    <h1>Changing the Value of an Attribute - Here changing src value</h1>
+    <img id="image" src="https://st.depositphotos.com/1787196/2514/i/450/depositphotos_25142717-stock-illustration-3d-cartoon-cute-yellow-ball.jpg" width="160" height="120">
+    <h1>Dynamic HTML content</h1>
+    <p id="date"></p>
+  </td>
+ </tr>
+
+ <tr>
+  <td>
+    <h1>Changing CSS</h1>
+    <p id="idChangeColor">Change the color of the content</p>
+    <h1 id="idChangingText" onclick="changeText(this)">Changing Color Using Events - ClickMe</h1>
+    <h3 id="idChangingColor">Color changing using click!</h3>
+    <button type="button" onclick="document.getElementById('idChangingColor').style.color = 'orange'">Click Me
+    </button>
+
+    <h1>The onchange Attribute</h1>
+    <h3>When you leave the input field, a function transforms the input to upper case.</h3>
+    <input type="text" id="fName" onchange="upperCase()"/>
+
+    <h1>The onmouseover and onmouseout Events</h1>
+    <div class="box" onmouseover="mOver(this)" onmouseout="mOut(this)">
+      Mouse Over Me
+    </div>
+
+    <h1>onmousedown, onmouseup and onclick Events</h1>
+    <div class="box" onmousedown="mDown(this)" onmouseup="mUp(this)">
+      click me!
+    </div>
+  </td>
+ </tr>
+<!-- ========================================================================= -->
+<!-- JavaScript HTML DOM EventListener -->
+<!-- The addEventListener() method -->
+ <tr>
+  <td>
+    <h1>JavaScript HTML DOM EventListener</h1>
+    <p>This example uses the addEventListener() method to attach a click event to a button.</p>
+    <button id="btn1">Double Click Me!</button>   
+    <p id="dateTime"></p>
+
+    <h1>addEventListener(event, function, useCapture)</h1>
+    <div id="outer">Outer
+      <div id="inner">Inner</div>
+    </div>
+    
+    <h1>Add Many Event Handlers to the Same Element</h1>
+    <button id="manyEventsOnBtn">click me</button>
+    <p id="manyEvents"></p>
+  </td>
+ </tr>
+
+
+  </table>
+  </body>
+  <!-- <script src="script.js"></script> -->
+  <script src="id.js"></script>
+  <script src="class.js"></script>
+  <script src="tag.js"></script>
+  <script src="querySelector.js"></script>
+  <script src="form.js"></script>
+  <script src="changingValues.js"></script>
+  <script src="changingCss.js"></script>
+</html>

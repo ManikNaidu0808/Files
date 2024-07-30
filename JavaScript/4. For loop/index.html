@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        height: 50px;
+        width: 300px;
+        text-align: center;
+      }
+      th {
+        width: 70px;
+        font-size: 30px;
+      }
+      td {
+        font-size: 20px;
+      }
+      h1,
+      p,
+      table {
+        width: 50%;
+        height: 100%;
+        margin: auto;
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <th>for loop:</th>
+        <td>
+          Loop that repeats a block of code for a specified number of times
+        </td>
+      </tr>
+      <tr>
+        <th>for...in:</th>
+        <td>
+          Loop that repeats a block of code for each property of an object
+        </td>
+      </tr>
+      <tr>
+        <th>for...of:</th>
+        <td>
+          Loop that is used to loop through iterable like Array, String, etc
+        </td>
+      </tr>
+      <tr>
+        <th>while:</th>
+        <td>
+          A loop that repeats a block of code while a given condition is true
+        </td>
+      </tr>
+      <tr>
+        <th>do...while:</th>
+        <td>
+          This also execute a block of code until a given condition is true but
+          it executes the block of code at least once
+        </td>
+      </tr>
+    </table>
+    <script>
+      // loop is a control flow statement that is used to execute a block of code over and over again until the condition given in the loop is true.
+      // In simple words, a loop is a block of code that is executed over and over again until a condition is met.
+
+      //   for (var i = 1; i <= 5; i++) {
+      //     console.log(i);
+      //   }
+
+      //   squares
+      //   for(let i = 1; i<=5 ; i++){
+      //     console.log(i*i)
+      //   }
+
+      //   for(let i=0; i<5; i++){
+      //     for(let j=0; j<5; j++){
+      //         console.log(i+' '+j);
+      //     }
+      //   }
+
+      //   let arr = [
+      //     [1, "one", 2, "two"],
+      //     [3, "three", 4, "four"],
+      //   ];
+      //   for (var i = 0; i < arr.length; i++) {
+      //     for (var j = 0; j < arr[i].length; j++) {
+      //       console.log(arr[i][j]);
+      //     }
+      //   }
+
+      // for in loop
+      //   The for...in loop is used to iterate over the properties of an object. It is also used to iterate over an array.
+      //  var car = {
+      //   name: "ford",
+      //    color: "black",
+      //    model: "mustang",
+      //  };
+
+      //  for(let i in car){
+      //    console.log(`${i} = ${car[i]}`)
+      //  }
+
+      // for of loop
+      // The for...of loop is used to iterate over the elements of an array. It is also used to iterate over an iterable object like an array, strings, NodeList, arguments, etc.
+      // let fruits = ["Apple", "Banana", "Carrot", "Guava", "Orange"];
+      // for(let i of fruits){
+      //     console.log(i)
+      // }
+
+      // let moto = "Learn Javascript";
+      // for (let char of moto) {
+      // console.log(char);
+      // }
+
+      //1. Square Star Pattern in Javascript
+      // *****
+      // *****
+      // *****
+      // *****
+      // *****
+
+      // let string = "";
+      // for (let i = 1; i <= 5; i++) {
+      //   for (let j = 1; j <= 5; j++) {
+      //     string = string + "*";
+      //   }
+      //   string += "\n";
+      // }
+      // console.log(string);
+
+      //   2.Right Triangle Pattern
+      //     *
+      //    **
+      //   ***
+      //  ****
+      // *****
+
+      // let string = "";
+      // for(let i=1; i<=5; i++){
+      //     for(let j=0; j<5-i;j++){
+      //         string +=" ";
+      //     }
+      //     for(let k=0; k<i; k++){
+      //             string += "*";
+      //         }
+      //     string+= '\n';
+      // }
+      // console.log(string)
+    </script>
+  </body>
+</html>

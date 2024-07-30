@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        #div{
+            border: 2px solid black;
+            height: 50px;
+            width:100px
+        }
+    </style>
+  </head>
+  <body>
+    <!-- In Event bubbling when an event is fired for the element then its first run for the element then the same event is fired for its parent element, then all the way up on another ancestor.
+
+    For example, we have three nested elements MAIN > DIV > P, and a click event is fired on 'P' then it will fire for its parent 'DIV' and then for 'MAIN'. -->
+
+    <p>Click any element box below.</p>
+    <div class="border" id="main">
+      click on me, I am  "MAIN" container
+      <div id="div">
+        Click on me . I am 'div' tag
+        <p id="p">Click on me , I am "p" tag</p>
+      </div>
+    </div>
+  </body>
+  <script>
+     document.getElementById("p").addEventListener("mouseover", function (){
+         alert("P element") 
+        });
+    document.getElementById("div").addEventListener("mouseout", function (){
+        div.style.color = 'red'; 
+        div.style.backgroundColor = 'green'; 
+        alert("DIV element color is changed") 
+        });
+    document.getElementById("main").addEventListener("mouseover", function (){
+         alert("MAIN element also fired")
+        });
+  </script>
+</html>

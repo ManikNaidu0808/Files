@@ -1,0 +1,262 @@
+<!-- Datatypes(string, number, boolean, bigint, undefined, null, symbol, object) -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Datatypes</title>
+    <style>
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        height: 50px;
+        width: 300px;
+        text-align: center;
+      }
+      h1,
+      table {
+        width: 50%;
+        height: 100%;
+        margin: auto;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+      p {
+        width: 55%;
+        height: 100%;
+        margin: auto;
+        align-items: center;
+        justify-content: center;
+        text-align: justify;
+        font-size: 22px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-container">
+      <p>
+        Type Coercion –Type Coercion is the automatic conversion of “Values”
+        from one data type to another.<br />
+        –It is a fundamental part of JavaScript and can be used to make code
+        more readable and efficient.<br />
+        –There are 2 types of coercion in JS: Implicit and Explicit.<br />
+        –Implicit Coercion happens automatically, while explicit coercion is
+        done manually by the programmer.<br />
+        –NOTE– It’s worth noting that type coercion can lead to unexpected
+        results, so it’s essential to be aware of how JS handles these
+        situations
+      </p>
+      <div class="container-1">
+        <h1>Data-type Strings</h1>
+        <table>
+          <tr>
+            <th>Execution</th>
+            <th>Result</th>
+          </tr>
+          <tr>
+            <td>let sum = "Manik" - 20;</td>
+            <td>console.log(sum) = NaN</td>
+          </tr>
+          <tr>
+            <td>let sum1 = "Manik" + 20;</td>
+            <td>console.log(sum) = Manik20</td>
+          </tr>
+          <tr>
+            <td>let sum3 = "5" - 10;</td>
+            <td>
+              console.log(sum3) = -5 ['-' it is using type coercion ,here]
+              Implicit Type
+            </td>
+          </tr>
+          <tr>
+            <td>let sum4 = "5" + 10;</td>
+            <td>console.log(sum4) = 510</td>
+          </tr>
+          <tr>
+            <td>let sum5 = 20+"10"</td>
+            <td>console.log(sum5) = 2010</td>
+          </tr>
+          <tr>
+            <td>let sum6 = 20-"5"</td>
+            <td>console.log(sum6) = 15</td>
+          </tr>
+          <tr>
+            <td>let sum7 = "" + 0;</td>
+            <td>console.log(""+"0") = 0</td>
+          </tr>
+          <tr>
+            <td>let sum8 = "Manik"-"Naidu"</td>
+            <td>console.log(sum8) = NaN</td>
+          </tr>
+
+          <tr>
+            <td>let sum9 = true+true</td>
+            <td>console.log(sum9) = 2</td>
+          </tr>
+          <tr>
+            <td>let sum10 = true+false</td>
+            <td>console.log(sum10) = 1</td>
+          </tr>
+          <tr>
+            <td>let sum11 = false+true</td>
+            <td>console.log(sum11) = 1</td>
+          </tr>
+          <tr>
+            <td>let sum12 = false-true</td>
+            <td>console.log(sum12) = -1</td>
+          </tr>
+          <tr>
+            <td>let sum13 = false-false</td>
+            <td>console.log(sum13) = 0</td>
+          </tr>
+          <tr>
+            <td>let sum14 = true-false</td>
+            <td>console.log(sum14) = 1</td>
+          </tr>
+          <tr>
+            <td>console.log(!null)</td>
+            <td>true</td>
+          </tr>
+          <tr>
+            <td>console.log(null)</td>
+            <td>null</td>
+          </tr>
+          <tr>
+            <td>console.log(!undefined)</td>
+            <td>true</td>
+          </tr>
+          <tr>
+            <td>console.log(undefined)</td>
+            <td>undefined</td>
+          </tr>
+
+          <tr>
+            <td>console.log(typeof(undefined))</td>
+            <td>undefined</td>
+          </tr>
+          <tr>
+            <td>console.log(typeof(null))</td>
+            <td>object</td>
+          </tr>
+          <tr>
+            <td>console.log(typeof(object))</td>
+            <td>undefined</td>
+          </tr>
+          <tr>
+            <td>console.log(typeof(typeof(undefined)))</td>
+            <td>string</td>
+          </tr>
+          <tr>
+            <td>console.log(typeof(typeof(null)))</td>
+            <td>string</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <script>
+      let sum = "manik" - 20;
+      console.log(sum);
+
+      let sum1 = "Manik" + 20;
+      console.log(sum1);
+      (Ans) => Manik20;
+
+      let sum3 = "5" - 10; //if (-) it is using type coercion ,here Implicit Type
+      console.log(sum3);
+
+      let sum4 = "5" + 10; //If getting (+) It is concatinating
+      console.log(sum4);
+
+      let sum5 = 20 + "10";
+      console.log(sum5);
+
+      let sum6 = 20 - "5";
+      console.log(sum6);
+
+      let sum7 = "" + 0;
+      console.log("" + "0"); //typeof is “string”
+
+      let sum8 = "Manik" - "Naidu";
+      console.log(sum8);
+
+      let sum9 = true + true;
+      console.log(sum9);
+
+      let sum10 = true + false;
+      console.log(sum10);
+
+      let sum11 = false + true;
+      console.log(sum11);
+
+      let sum12 = false - true;
+      console.log(sum12);
+
+      let sum13 = false - false;
+      console.log(sum13);
+
+      let sum14 = true - false;
+      console.log(sum14);
+
+      let str = "Hello, World!";
+      console.log(str.length);
+      console.log(str.toUpperCase());
+      console.log(str.toLowerCase());
+      console.log(str.substring(0, 6));
+      console.log(str.replace("World", "JavaScript"));
+      console.log(str.split(", "));
+
+      console.log(!null); //true
+      console.log(null); //null
+      console.log(!undefined); //true
+      console.log(undefined); //undefined
+
+      console.log(typeof undefined); //undefined
+      console.log(typeof typeof undefined); //string
+      console.log(typeof typeof null); //string
+      console.log(typeof null); //object
+
+      //Object Example
+      let person = [
+        {
+          firstName: "John",
+          lastName: "Doe",
+          age: 30,
+          isEmployed: true,
+          address: {
+            street: "123 Main St",
+            city: "Somewhere",
+            zipCode: "12345",
+          },
+        },
+        {
+          firstName: "Manik",
+          lastName: "Naidu",
+          age: 30,
+          isEmployed: true,
+          address: {
+            street: "456 Main St",
+            city: "space",
+            zipCode: "020202",
+          },
+        },
+      ];
+      console.log(person);
+      console.log(person[0].address.city, person[1].address.city);
+
+      //creating Object
+      const car = new Object();
+      car.model = 2021;
+      car.brand = "Hyundai";
+      car.newObject = {
+        model: 2022,
+        brand: "Toyota",
+      };
+
+      console.log(car);
+    </script>
+  </body>
+</html>

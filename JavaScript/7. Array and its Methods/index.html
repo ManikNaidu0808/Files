@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array Methods List</title>
+  </head>
+  <body>
+    <script>
+      //! 1. concat Method
+      //   const numbers = [1, 2, 3];
+      //   const characters = ["a", "b", "c"];
+      //   const booleans = [true, false];
+
+      //   console.log(numbers.concat(characters));
+      //   console.log(numbers.concat(characters, booleans));
+      //   console.log(numbers.concat(characters, 24, "John", { x: 12, y: 13 }));
+
+      //2. copyWithIn Method
+      // const arr1 = ['a', 'b', 'c', 'd', 'e', 1, 2, 3];
+      // const arr2 = ['a', 'b', 'c', 'd', 'e', 1, 2, 3];
+      // const arr3 = ['a', 'b', 'c', 'd', 'e', 1, 2, 3];
+
+      // console.log(arr1.copyWithin(2));
+      // console.log(arr2.copyWithin(2, 4));
+      // console.log(arr3.copyWithin(2,4,6));
+
+      //3. entries Method
+      // The entries() method in javascript returns a new Array Iterator object that contains the key/value pairs for each index in the array.
+      // The entries() method does not change the original array but returns a new array iterator object.
+      // const arr = ["a", "b", "c", "d", "e"];
+      // const iterator1 = arr.entries();
+
+      // console.log(iterator1.next().value);
+      // console.log(iterator1.next().value);
+      // console.log(iterator1.next().value);
+      // console.log(iterator1.next().value);
+      // console.log(iterator1.next().value);
+
+      // // using for...of loop
+      // const iterator2 = arr.entries();
+      // for (const [index, value] of iterator2) {
+      // console.log(index, value)
+      // }
+
+      //4. every() Method.
+      // It executes a function for each element in the array and returns true if the function returns true for all elements.
+      // The original array is not modified by this method.
+      // const arr1 = [1, 2, 3, 4, 5];
+      // const arr2 = [22, 42, 86, 100, 4];
+
+      // function isEven(num) {
+      // return num % 2 === 0;
+      // }
+      // console.log(arr1.every(isEven));
+      // console.log(arr2.every(isEven));
+
+      //5. fill Method
+      // The fill() method in javascript returns a modified array by filling a specified index with the specified value.
+      // const arr = ["a", "a", "a", "a", "a", "a", "a"];
+
+      // console.log(arr.fill("b"));
+      // console.log(arr.fill("c", 3));
+      // console.log(arr.fill("k", 2, 5));
+
+      //6. filter Method
+      //The filter() method in javascript is used to create a new array with the elements of the same array if elements pass a certain condition.
+      // syntax = arr.filter(callback(currentValue, index, arr), thisArg)
+      // const arr = [10, 12, 5, 15, 2, 32, 20, -5, 23];
+      // console.log(arr.filter((e)=>e>10))
+      // console.log(arr.filter((element) => element % 2 === 0));
+
+      //7. find Method
+      // The find() method in javascript is returned the first value of the array elements which satisfies the provided condition.
+      // const arr = [1,10, 2, 25, 5, 15];
+      // console.log(arr.find((element) => element > 10));
+
+      //8. findIndex Method
+      // The findIndex() method is the same as find() but it returns the index value of the element, not the value itself.
+      // If no such element exists then returns -1.
+      //  syntax = arr.findIndex(callback(currentValue, index, arr), thisArg)
+      // const arr = [1, 10, 2, 25, 5, 15];
+      // console.log(arr.findIndex((element) => element > 10));
+
+      // 9. forEach Method
+      // Performs an action on each element. (It does not return a value, so it cannot be directly chained with other array methods , it is just used for display)
+      // Use:- Used when you want to iterate over the array elements and perform an action on each element, but you don’t need a new array
+      // let fruit= ['apple', 'banana' , 'pineapple' , 'orange' , 'kiwi']
+      // fruit.forEach((curElem ,index ,arr)=>{
+      //     console.log(curElem,index)
+      // })
+
+      // const arr = [10, 12, 37, 24, 65];
+      // function print(element, index){
+      //     console.log(element+" is at index "+index)
+      // }
+      // arr.forEach(print);
+
+      //10. Array.from Method
+      // The Array.from() method in javascript is used to convert an array like object to an array.
+      // An array like object is an object which has a length property. Example: string, arguments, NodeList, HTMLCollection, etc.
+      // To convert these objects to a proper array pass the object as an argument to the Array.from() method.
+      //   const alphabets = "abcdefghijklmnopqrstuvwxyz";
+      //   const arr = Array.from(alphabets);
+      //   console.log(arr);
+
+      //   const obj = {
+      //     0: "a",
+      //     1: "b",
+      //     2: "c",
+      //     3: "d",
+      //     4: "e",
+      //     5: "f",
+      //     length: 6
+      //   };
+      //   const arr2 = Array.from(obj);
+      //   console.log(arr2)
+
+      //11.  includes Method
+      // The includes() method in javascript determines whether certain values exist in the array or not. If the value exists in the array then the method returns true else return false
+      // syntax = arr.includes(searchElement, fromIndex)
+      // const fruit = ["mango", "banana", "apple", "orange", "watermelon"]
+      // console.log(fruit.includes("apple"));
+
+      // const alphabets = ["a", "b", "c", "d", "e"];
+      // console.log(alphabets.includes('a'))
+      // console.log(alphabets.includes('a',2))
+      // console.log(alphabets.includes('h'))
+
+      // 12.  indexOf Method
+      // The indexOf() method in javascript returns the first index of the element passed as an argument. If the value does not exist then returns -1
+      // Syntax = arr.indexOf(searchElement, fromIndex)
+      // const arr = ["a", 'd',"b", 'a',"c",'h', "d", "e"];
+      // console.log(arr.indexOf('d'))
+      // console.log(arr.indexOf('a'))
+
+      // 13. isArray Method
+      // The isArray() method in javascript returns true if the passed argument is an array else returns false.
+      // It is used to check whether the passed argument is an array or not.
+      // syntax = Array.isArray(arr)
+      // const arr = ["a", "b", "c", "d", "e"];
+
+      // console.log(Array.isArray(arr));
+      // console.log(Array.isArray("abc"));
+
+      // 14. join Method
+      // The join() method in javascript joins all elements of the array as a string separated by commas or by some specified separator and returns it as a string.
+      // The function accepts 1 argument which is a separator. It is optional and its default value is a comma (",").
+      // const fruit = ["mango", "banana", "apple", "orange", "watermelon"];
+      // console.log(fruit.join());
+      // console.log(fruit.join(''));
+      // console.log(fruit.join(' '));
+      // console.log(fruit.join(':'));
+      // console.log(fruit.join('/'));
+      // console.log(fruit.join('-'));
+
+      //15. lastIndexOf Method
+      // The lastIndexOf() method returns the last index of the element passed as an argument in the method. If the value does not exist then returns -1.
+      // syntax = arr.lastIndexOf(searchElement, fromIndex)
+      // const arr = ["b", "d", "i", 'g',"b", "d", "f", "i", "b", "d", "g", "i"];
+      // console.log(arr.lastIndexOf('g'))
+
+      //! 16. map Method
+      // It returns a new array by filling the array with the results of the callback function running for each element of the array.
+      // You have to pass a callback function as an argument to the map() method. The callback function is called for each element of the array and the return value of the callback function is stored in the new array.
+      // syntax = arr.map(callback(currentValue, index, array), thisArg)
+
+      // let fruit = ["apple", "banana", "pineapple", "orange", "kiwi"];
+      // const myforeach = fruit.map((curElem, index, arr) => {
+      //   return `${curElem} ${index} `;
+      // });
+      // console.log(myforeach);
+
+      // need Square
+      // const num = [1, 2, 3, 4, 5];
+      // const newArray = num.map((e)=>e*e)
+      // console.log(newArray)
+
+      // multiply currElem to Index
+      // const newArray2 = num.map((curElem,index)=>curElem*index)
+      // console.log(newArray2)
+
+      //! 17. push Method
+      // Add one or more elements to the end.  The push() method changes the length of the array. The push() returns the length of the array.
+      // syntax = arr.push(value1, value2, ...)
+      // const fruit = ["mango", "banana"];
+      // fruit.push('orange')
+      // console.log(fruit)
+      // // console.log(fruit.push('pineApple'))
+
+      // fruit.push("litchi", "watermelon");
+      // console.log(fruit);
+
+      // If i store information in result it will give number. But I directly push data then it will show array.
+      // const fruit = ['pineapple'];
+      // const result = fruit.push('mango');
+      // console.log(result)
+
+      //! 18. pop Method
+      // Removes the last element from an array.
+      // const fruit = ["mango", "banana", "apple", "orange", "watermelon"];
+      // const result = fruit.pop();
+      // console.log(result); // If we store data in result and console.log(result) it will provide the pop element. ["watermelon"]
+      // console.log(fruit);
+      // fruit.pop()
+      // console.log(fruit)
+
+
+      //  19. shift Method
+      // Removes the first element from an array.If the array is empty, the method returns undefined.
+      // const fruit = ["mango", "banana", "apple", "orange", "watermelon"];
+      // fruit.shift();
+      // console.log(fruit) //['mango'] removed
+
+      // let car; // TypeError: Cannot read properties of undefined (reading 'shift')
+      // car.shift();
+      // console.log(car);
+
+      // 20. unshift Method
+      // Adds one or more elements to the beginning of the array and returns the new length of the array
+      // const fruit = ["orange", "watermelon"];
+      // fruit.unshift("mango")
+      // fruit.unshift("litchi")
+      // console.log(fruit);
+
+
+      // 21. reduce Method
+      // The reduce method is used to accumulate or reduce an array to a single value. It iterates over the elements of an array and applies a callback function to each element, updating an accumulator value with the result. The reduce method takes a callback function as its first argument and an optional initial value for the accumulator as the second argument.
+      // Syntax - array.reduce((accumulator, currentValue, index, array)=>{ },initialValue)
+      // const num = [1, 2, 3, 4, 5];
+      // const sum = num.reduce((acc , currVal)=> acc+currVal)
+      // console.log(sum)
+
+      // const number = [300,500,300,400,500];
+      // let total = number.reduce((accum,currElem)=> {return currElem-accum},0)
+      // console.log(total);
+
+      // find biggest no. in array
+      // const num = [24, 53, 78, 91, 12];
+      // const max = num.reduce((acc,curr)=> Math.max(acc,curr));
+      // console.log(max);
+
+      // 22. reverse Method
+      // The reverse() method in javascript reverse the array elements from first to last.
+      // const num = [1,2,3,4,4,1,5,7,8,9]
+      // num.reverse()
+      // console.log(num)
+      // const result = num.reverse();
+      // console.log(result);
+
+      // let num1 //TypeError: Cannot read properties of undefined (reading 'reverse')
+      // num1.reverse();
+      // console.log(num1);
+
+
+      // 23. slice Method
+      // slice() extracts a part of a string and returns the extracted part in a new string. 
+      // Syntax —>  slice(start,end) 
+      // const num1 = [1, 2, 3, 4, 5, 6];
+      // const num2 = num1.slice();
+      // const num3 = num1.slice(2);
+      // const num4 = num1.slice(2,4);
+      // console.log(num2)
+      // console.log(num3)
+      // console.log(num4)
+
+      // const name = 'manik naidu'
+      // const name1 = name.slice(3)
+      // const name2 = name.slice(3,14)
+      // const name3 = name.slice(3,6)
+      // console.log(name1)
+      // console.log(name2)
+      // console.log(name3)
+
+      // let name ; //TypeError: Cannot read properties of undefined (reading 'slice')
+      // let name1 = name.slice(3);
+      // console.log(name1)
+
+
+      // 24. some Method
+      // The some() method in javascript determines whether at least one element in the array passes certain conditions by providing a callback function.
+      // If any of array element passes the test then it returns true, else returns false.
+      // const num = [1, 2, 3, 4, 5];
+      // console.log(num.some((e)=>e>2 && e<8))
+
+      // const name = ['manik' , 'naidu' , 'interbiz'];
+      // const result = name.some((e)=> e == 'mani' ,'naidu'); //false
+      // const result2 = name.some((e)=> e == 'naidu'); //true
+      // console.log(result);
+      // console.log(result2);
+
+
+      // 25. sort Method
+      // The sort method sorts the elements of an array in ascending order and returns the sorted array. By default, it sorts elements as strings.
+      // The Sort Method does not work with numbers.
+      // const fruit = ["mango", "banana", "apple", "orange", "watermelon"];
+      // console.log(fruit.sort());
+
+      // const alphabet = [ncsdsdjkcjkn]; //ReferenceError: ncsdsdjkcjkn is not defined
+      // console.log(alphabet.sort());
+
+      // const alphabet1 = ['d0','1e','a','rr','1a','as','11','10','1a','1' ,'9','1b','2']; //it will not correctly because of numbers
+      // console.log(alphabet1.sort());
+
+      // const numbers = [9,31,2,4,5,6,16,7,8,1,6,6]
+      // console.log(numbers.sort()) //Sort Method does not work with numbers.
+      // // By compare method we can sort numbers
+      // let compare = numbers.sort((a,b)=> {
+      //       if(a>b) return 1;
+      //       if(b>a) return -1;
+      //       }
+      //     )
+      //     console.log(compare)
+
+
+      // 26. splice Method
+      // splice(startElement, deleteCount,item1,item2,...itemN)
+      // Splice method of array instances changes the contents of an array by replacing or removing existing elements and/or adding new elements in place.
+      // If you don't want to delete any element then add “0”.
+      // syntax = arr.splice(index, deleteCount, replaceBy)
+      // const day = ["monday", "wednesday", "friday", "sunday"];
+      // day.splice(1, 0, "tuesday");
+      // console.log(day);
+
+      // day.splice(3,0,'thursday')
+      // console.log(day)
+
+      // day.splice(5,0,'saturday' ,'holiday')
+      // console.log(day)
+
+      // day.splice(6,1);
+      // console.log(day);
+
+
+      // 27. toString Method
+      // The toString() method in javascript returns a string representing the elements of the array.
+      // const array1 = [1, "star", 34, true, 23];
+      // console.log(array1.toString());
+      // console.log(typeof(array1.toString()));
+      // console.log(typeof(array1))
+
+      // let arr = ['a','b','c','d','e','f','g','h','i'];
+      // console.log(arr.toString());
+      // console.log(typeof(arr))
+      // console.log(typeof(arr.toString()));
+
+      // // let arr1 = [v,b,d,a,f,e]; //ReferenceError: v is not defined
+      // // console.log(arr.toString());
+
+      // let arr2 = [1,2,3,4,5,6,7,8,9,0]
+      // console.log(arr2.toString());
+
+      // let arr3 = {a: 1, b: 2, c: 3, d: 4}; // Obect Literals
+      // console.log(arr3.toString());
+
+
+      // 28. values Method
+      // The values() method in javascript returns a new array iterator that contains values of each index in the array.
+      // const array1 = [1, "star", 34, true, 23];
+      // console.log(typeof(array1));
+      // const iterator = array1.values();
+      // console.log(typeof(iterator));
+      // for(let i of array1){
+      //   console.log(i);
+      // }
+
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>

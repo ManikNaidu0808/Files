@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Number and its Methods</title>
+  </head>
+  <body>
+    <script>
+       //? 255 === 255.0; // true
+       //? 255 === 0xff; // true (hexadecimal notation)
+       //? 255 === 0b11111111; // true (binary notation)
+       //? 255 === 0.255e3; // true (decimal exponential notation)
+
+       // Many built-in operations that expect numbers first coerce their arguments to numbers
+       // Numbers are returned as-is.
+       // 1. undefined turns into NaN.
+       // 2. null turns into 0.
+       // 3. true turns into 1; false turns into 0
+       // 4. Strings are converted by parsing them as if they contain a number literal. Parsing failure results in NaN.
+       // 4.A Leading and trailing whitespace/line terminators are ignored.
+       // 4.B Infinity and -Infinity are recognized as literals. In actual code, they are global variables.
+       // 4.C Numeric separators are not allowed.
+       // 5. Symbols throw a TypeError.
+
+      //  Number() constructor
+      //  The Number() constructor creates Number objects. When called as a function, it returns primitive values of type Number.
+        //  Syntax:-
+         // new Number(value)
+         // Number(value)
+    // Number() can be called with or without new, but with different effects
+            // const a = new Number("123"); // a === 123 is false
+            // const b = Number("123"); // b === 123 is true
+            // a instanceof Number; // is true , instanceof operator checks if a is an instance of the Number constructor, which it is, so this is true.
+            // b instanceof Number; // is false , Primitive values are not instances of any constructor, so b instanceof Number is false
+            // typeof a; // "object"
+            // typeof b; // "number"
+
+
+
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>

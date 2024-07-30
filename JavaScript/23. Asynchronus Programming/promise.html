@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise</title>
+</head>
+
+<body>
+    <script>
+        // let data = 1;
+        // console.warn("first",data);
+        // data = 2;
+        // setTimeout(()=>{
+        //     console.log('second',data);
+        // },5000);
+        // data = 3;
+        // console.warn('last',data);
+
+        // promise example 
+        let promise = new Promise((resolve,reject)=>{
+            setTimeout(()=>{
+                resolve({
+                    name:"Manik",
+                    age:25
+                })
+                // reject({
+                //     name:"Manik",
+                //     age:25
+                // })
+            },2000);
+        })
+        promise.finally((item)=>{
+            console.warn("block finally",item);
+        })
+        promise.then((item)=>{
+            console.warn("block then",item);
+        }).catch((error)=>{
+            console.warn("block catch",error);
+        })
+        console.warn('hello');
+
+        let GGG = fetch('https://dummy.restapiexample.com/api/v1/employees');
+        GGG.then((item)=>{
+           return item.json();
+        }).then((result)=>{
+            console.log('Result',result);
+        });
+
+        // all , allSettled and race promise
+        // all if one reject then all reject 
+        //   let data = Promise.all([
+        //        new Promise((resolve,reject)=>{
+        //         setTimeout(()=>{
+        //             resolve('1 second');
+        //         },1000)
+        //        }),
+        //        new Promise((resolve,reject)=>{
+        //         setTimeout(()=>{
+        //             reject('2 second');
+        //         },2000)
+        //        }),
+        //        new Promise((resolve,reject)=>{
+        //         setTimeout(()=>{
+        //             resolve('4 second');
+        //         },4000)
+        //        })
+        //   ]);
+        // allSettled if one reject then all data get and status get this method
+        //   let data = Promise.allSettled([
+        //        new Promise((resolve,reject)=>{
+        //         setTimeout(()=>{
+        //             resolve('1 second');
+        //         },1000)
+        //        }),
+        //        new Promise((resolve,reject)=>{
+        //         setTimeout(()=>{
+        //             reject('2 second');
+        //         },2000)
+        //        }),
+        //        new Promise((resolve,reject)=>{
+        //         setTimeout(()=>{
+        //             resolve('4 second');
+        //         },4000)
+        //        })
+        //   ]);
+        // race this statement first resolve then show first 
+        let data = Promise.race([
+            new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve('1 second');
+                }, 1000)
+            }),
+            new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve('2 second');
+                }, 2000)
+            }),
+            new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve('4 second');
+                }, 4000)
+            })
+        ]);
+        data.then((item) => {
+            console.warn("block then", item);
+        }).catch((error) => {
+            console.warn("block catch", error);
+        })
+
+    </script>
+</body>
+
+</html>

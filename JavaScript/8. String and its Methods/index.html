@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>String Methods</title>
+  </head>
+  <body>
+    <script>
+      // 1. charAt method
+      // charAt() method returns the character at a specified index(position) in a string.
+      // const str = "Hello World";
+      // console.log(str.charAt(2))
+      // console.log(str.charAt('d')) //it will only return H
+      // console.log(str.charAt(d)) //ReferenceError: d is not defined
+
+      // const str=[1,2,3] //TypeError: str.charAt is not a function
+      // console.log(str.charAt(1))
+
+      // const str2=['1','2','3'] //TypeError: str.charAt is not a function
+      // console.log(str2.charAt(1))
+
+      // const str3='195454' //TypeError: str.charAt is not a function
+      // console.log(str3.charAt(1))
+
+      // const str = "Hello World";
+      // console.log(str.charAt(-2)) //It will give no value
+
+      // 2. charCodeAt method
+      // charCodeAt() method returns the code of the character at a specified index in a string. The method returns a UTF-16 code (an integer between 0 and 65535)
+      // const str = "Aello World";
+      // console.log(str.charCodeAt(0)); //65
+      // console.log(str.charCodeAt(1)); //101
+      // console.log(str.charCodeAt(-1)); //NaN
+      // console.log(str.charCodeAt("w")); //it will give only first index character code
+      // console.log(str.charCodeAt(20));  //NaN - if length exeeds then it wil give NaN
+
+      // 3. concat method
+      //   const firstName = "Hello";
+      //   const lastname = "World";
+      //   const middleName = 'J'
+      //   let result = firstName.concat(' '+lastname+' ' + middleName);
+      //   console.log(result);
+
+      //   let num = 1;
+      //   let num2 = 2;
+      //   console.log(num+""+num2) // result 12
+
+      // 4. endsWith
+      //   It is used to determines whether the string ends with a specified substring or not.
+      //   If it ends with a specified string then it returns true, else returns false.
+      //   const question = "What is DOM?";
+      //     console.log(question.endsWith("?"));
+      //     console.log(question.endsWith("m"));
+
+      // There is also a second argument in the method which is optional. It specifies a length value for the string. If you pass the length value is 5 then it will see only the first 5 characters of the string.
+      // Please note that endsWith() method is case sensitive.
+      // const question = "What is DOM?";
+      // console.log(question.endsWith("i",6)); //true
+      // console.log(question.endsWith("T",3)); //false because of case sensitive.
+
+      // 5.  includes method
+      // It is to used determines whether a given substring is present in the calling string or not
+      // const sentence = "Carbon emission is increasing Day by day.";
+      //     console.log(sentence.includes("is")) //true
+      //     console.log(sentence.includes("is" ,18)) //false - because index starts from index-18
+
+      //   6. indexOf
+      // indexOf returns the first index at which a given element can be found in the array, or -1 if it is not present.
+      // If the given input is not present in the array it returns -1?
+      // const fruits = ["Apple","Banana",'Mango','Watermelon'];
+      // console.log(fruits.indexOf('Maniknaidu'))   // -1
+      // console.log(fruits.indexOf('Mango')) //2
+
+      // const sentence = "Carbon emission day is increasing day by day";
+      //     console.log(sentence.indexOf('increasing')) //19
+      //     console.log(sentence.indexOf('Carbon')) //0
+      //     console.log(sentence.indexOf('carbon')) //-1
+      //     console.log(sentence.indexOf('Caron')) //-1
+      //     console.log(sentence.indexOf('day' ,19)) // 34 because indexing starts from 19
+
+      //    7. lastIndexOf
+      // lastIndexOf method of array instances returns the last index at which a given element can be found in the array, or -1 if it is not present.
+      // The lastIndexOf method do searching from backwards, starting at fromIndex
+      // syntax = : lastIndexOf(searchElement , formIndex)
+      // const sentence = "to do or not to do";
+      // console.log(sentence.lastIndexOf("to")); //but indexing start from start and it will fetch from last.
+      // console.log(sentence.lastIndexOf("to" , 10)); // it will skip 10 no. from last and then search 'to' ,if found 'to' it will start counting indexing from start not from end.
+
+      // 8. match method
+      // let text = "Hello JavaScript, welcome to our world best JavaScript course"
+      // let result = text.match(/JavaScript/g); //global expresion
+      // console.log(result);  // [ 'JavaScript', 'JavaScript' ]
+
+      //It will search even if case sensitive
+      // let text2 = "Hello JavaScript, welcome to our world best javascript course"
+      // let result2 = text2.match(/javaScript/gi);
+      // console.log(result2)
+
+      // let text3 = "Hello JavaScript, welcome to our world best javascript course"
+      // let result3 = text3.match('javaScript');
+      // console.log(result3); // it will give null
+
+      // let text3 = "Hello JavaScript, welcome to our world best javascript course"
+      // let result3 = text3.match(/javascript/g);
+      // console.log(result3);
+
+      // 9. matchAll method
+      // Returns an iterator of all matches, providing detailed information about each match. Returns an empty iterator if no match is found.
+      // let text = "Hello JavaScript, welcome to our world best JavaScript course"
+      // let result = text.matchAll("Javascript");
+      // console.log(result); // Object [RegExp String Iterator] {}
+
+      //   Here JS converts the normal text into regular expression text.matchAll(/JavaScript/g); also adds the g flag at the end.
+      //   let text = "Hello JavaScript, welcome to our world best JavaScript course";
+      //   let result = text.matchAll("JavaScript");
+      //   console.log(...result);
+
+      // 10. repeat method
+      // concatenates a passed string by a specified number of times and return it as a new string.
+      //   const str = "Tick tock, ";
+
+      //   console.log(str.repeat(2)); //Tick tock, Tick tock,
+      //   console.log(str.repeat(4)); //Tick tock, Tick tock, Tick tock, Tick tock,
+      //   console.log(str.repeat(0)); //''
+
+      // 11. replace method
+      // Replace method is used to replace a specified value with another value.
+      //   const str = "Carbon emission is increasing day by day.";
+      //   console.log(str.replace("day", "year"));
+      //   console.log(str.replace(/day/g, "year"));
+
+      //   let text = "My name is Javascript"
+      //     let result = text.replace(/javascript/gi , 'Manik')
+      //     console.log(result)
+
+      // 12. replaceAll
+      //  It returns a new string after replacing all occurrences of matched pattern with a replacement string.
+      //   const str = "Carbon emission is increasing day by day.";
+      //   console.log(str.replaceAll("day", "year"));  //Carbon emission is increasing year by year.
+      //   console.log(str.replaceAll(/day/g, "month")); // Carbon emission is increasing month by month.
+
+      // 13. search method
+      // The search() method searches a string for a string(or a regular expression) and returns the position of the match
+      //   const str = "kjhBfdbAjdbj";
+      //   console.log(str.search(/[A-Z]/g)); //3
+
+      //   let text ="Hello JavaScript, welcome to our world best JavaScript course";
+      //   let result = text.search(/javascript/i);
+      //   console.log(result); // 6
+
+      // 14. slice method
+      // slice() extracts a part of a string and returns the new string.
+      //   const sentence = "Carbon emission is increasing day by day";
+      //   console.log(sentence.slice(5, 15));
+      //   console.log(sentence.slice(5));
+      //   console.log(sentence.slice(-15, -5));
+
+      // 15. split method
+      // divides the given string intro substring and returns an array of substrings.
+      //   const sentence = "Carbon emission is increasing day by day";
+
+      //   console.log(sentence.split()); //['Carbon emission is increasing day by day']
+      //   console.log(sentence.split("")); //['C', 'a', 'r', 'b', 'o', 'n', ' ', 'e', 'm', 'i', 's', 's', 'i', 'o', 'n', ' ', 'i', 's', ' ', 'i', 'n', 'c', 'r', 'e', 'a', 's', 'i', 'n', 'g', ' ', 'd', 'a', 'y', ' ', 'b', 'y', ' ', 'd', 'a', 'y']
+      //   console.log(sentence.split(" ")); // ['Carbon', 'emission', 'is', 'increasing', 'day', 'by', 'day']
+      //   console.log(sentence.split("is")); //['Carbon em', 'sion ', ' increasing day by day']
+
+      // 16. startsWith
+      // The startsWith() method returns true if a string begins with a specified value. Otherwise it returns false:
+      //   const sentence = "Carbon emission is increasing day by day";
+      //   console.log(sentence.startsWith("Car")); //true
+      //   console.log(sentence.startsWith("carbon")); // return false case-sensitive
+      //   console.log(sentence.startsWith("bon", 3)); //true
+      //   console.log(sentence.startsWith("emi", 7)); //true
+      //   console.log(sentence.startsWith("emi", 4)); //false
+
+      // 17. substr
+      // It is used to extract a substring from a string. It returns a part of the string, starting at a specific index and ending after a given number of characters.
+      // syntax = str.substr(startIndex, length)
+      //   const sentence = "Carbon emission is increasing day by day";
+
+      //   console.log(sentence.substr(10, 6)); //ssion
+      //   console.log(sentence.substr(10)); //ssion is increasing day by day
+      //   console.log(sentence.substr(-4, 3)); // da
+
+      // 18. substring method
+      // substring() extracts a part of a string and returns the extracted part in a new string. substring() extracts up to but not including indexEnd.
+      // Syntax —>  slice(from where we should start, how many values we have to take)
+      // substring() is similar to slice(). The difference is that start and  end values less than 0 are treated as 0 in substring()
+      // in substring we start counting from 1 not 0;
+      //   let text = "Try programiz";
+      //   console.log(text.substring(-6)); //  Try programiz -  Even if we given -6 it will start from 0 index
+      //   console.log(text.substring(5,10)); //rogra
+      //   console.log(text.substring(1,5)); // ry p
+
+      //   19. toLowerCase method
+      // converts the case of a string to lowercase and returns it as a new string.
+      //   const sentence = "CARBON emission IS INCREASING DAY BY DAY";
+      //   console.log(sentence.toLowerCase());
+
+      // 20. toUpperCase method
+      // it returns a new string by converting string to uppercase.
+      //   const sentence = "carbon emission is increasing day by day";
+      //   console.log(sentence.toUpperCase());
+
+      // 21. toString
+      // The toString() string method returns a number as a string in other words it converts number into string
+      //   we can use this method to output number as hexadecimal(16), octal(8) and binary(2).
+      //   const str = new String("hello World!");
+      //   console.log(str.toString(str));
+      //   const num = 31;
+      //   console.log(num.toString(16));
+
+      //   const array1 = [1, "star", 34, true, 23];
+      //   console.log(array1.toString());
+      //   console.log(typeof(array1.toString()));
+      //   console.log(typeof(array1))
+
+      //   let arr = ['a','b','c','d','e','f','g','h','i'];
+      //   console.log(arr.toString());
+      //   console.log(typeof(arr))
+      //   console.log(typeof(arr.toString()));
+
+      // // let arr1 = [v,b,d,a,f,e]; //ReferenceError: v is not defined
+      // // console.log(arr.toString());
+
+      // let arr2 = [1,2,3,4,5,6,7,8,9,0]
+      // console.log(arr2.toString());
+
+      // let arr3 = {a: 1, b: 2, c: 3, d: 4}; // Obect Literals
+      // console.log(arr3.toString());
+
+      //   22. trim method
+      // It removes whitespaces from both ends of the string. Whitespaces are space, tabs, newline, etc.
+      //   const str = "    TutorialsTonight    ";
+      //   console.log(str.trim());
+      //   const name = '          Manik      Naidu     T        ';
+      //   console.log(name.trim());
+
+      // 23. valueOf
+      // The values() method in javascript returns a new array iterator that contains values of each index in the array.
+      const str = new String("hello world");
+      console.log(str.valueOf());
+
+      const arr = ['a','b','c']
+      console.log(arr.valueOf())
+    </script>
+  </body>
+</html>
