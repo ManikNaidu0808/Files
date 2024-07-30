@@ -1,0 +1,27 @@
+
+.main{
+    border: 2px solid black;
+    width: 80%; 
+    margin: 30px auto;
+    padding: 30px;
+    background-color:rgb(250, 250, 38) ;
+    border-radius: 15px ;
+}
+ h1{
+    text-align: center;
+}
+.heading {
+	font-family: 'Pacifico', cursive;
+}
+
+label {
+	font-size: 20px;
+}
+.xcyz{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    margin: 50px auto;
+}
+
+
