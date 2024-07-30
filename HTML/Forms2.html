@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form and Form Validation</title>
+    <style>
+      .form {
+        border: 2px solid black;
+        width: 30%;
+      }
+      .container-1 {
+        display: flex;
+        justify-content: space-around;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="form">
+      <form>
+        <div class="container-1">
+          <div class="field-container">
+            <label for="name">Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              pattern="[A-Za-z\s]+"
+              title="Please enter only letters and spaces"
+              required
+            />
+          </div>
+          <div class="field-container">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+        </div>
+        <div class="container-1">
+          <div class="field-container-2">
+            <label for="address">Address</label>
+            <input type="address" id="address" name="address" required />
+          </div>
+          <div class="field-container-2">
+            <label for="address2">Address</label>
+            <input type="address" id="address2" name="address2" />
+          </div>
+        </div>
+        <div class="container-1">
+          <div class="field-container-3">
+            <label for="phnNo">Phone No.</label>
+            <input
+              type="tel"
+              id="phnNo"
+              name="phnNo"
+              pattern="^[6-9][0-9]{9}$"
+              title="Please enter a valid 10 digit valid phn no."
+              required
+            />
+          </div>
+          <div class="field-container-3">
+            <label>Gender</label>
+            <input type="radio" id="male" name="Gender" />
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="Gender" />
+            <label for="female">Female</label>
+            <input type="radio" id="others" name="Gender" />
+            <label for="others">others</label>
+          </div>
+        </div>
+        <div class="container-1">
+          <div class="field-container-2">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required />
+          </div>
+          <div class="field-container-2">
+            <label for="re-Password">Re-Password</label>
+            <input
+              type="password"
+              id="re-Password"
+              name="re-Password"
+              oninput="this.setCustomValidity(this.value != password.value ? 'Passwords do not match.' : '')"
+              required
+            />
+            <!-- oninput: This is an event attribute that specifies a script to execute when the input event occurs, which happens every time the user inputs something into the input field. -->
+
+            <!--this.setCustomValidity(...):  This is a method used on input fields to set a custom validation message. The this keyword refers to the current element, which in this case is the re-entered password input field (re-password). -->
+          </div>
+        </div>
+        <div>
+          <button>Reset</button>
+          <button>Submit</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
+
+

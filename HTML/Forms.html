@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width , initial-scale=1.0" />
+    <meta name="author" content="Manik Naidu" />
+    <meta name="description" content="Practice of Forms in HTML" />
+    <meta name="keywords" content="form validation , html form" />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: Arial, sans-serif;
+        background-color: beige;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+      #fromContainer {
+        background-color: #ffffff;
+        border-radius: 8px;
+        padding: 20px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        max-width: 600px;
+        width: 100%;
+      }
+      .interbiz{
+        font-family:fantasy;
+        font-size: 60px;
+        color: #5cb85c;
+        
+      }
+      .signin {
+        color: red;
+      }
+      .containerHeading {
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+        height: 100px;
+        line-height: 100px;
+      }
+      .formClass{
+        margin-top: 30px;
+      }
+      .container {
+        display: flex;
+        justify-content: space-around;
+        height: 80px;
+      }
+      .info-field input[type="text"],
+      .info-field input[type="tel"],
+      .info-field input[type="email"],
+      .info-field input[type="date"],
+      .info-field select {
+        width: 275px;
+        height: 33px;
+        margin: 3px;
+        border: none;
+        border-bottom: 2px solid gray;
+        background-color: transparent;
+      }
+      .info-field input[type="text"]:focus,
+      .info-field input[type="tel"]:focus,
+      .info-field input[type="email"]:focus,
+      .info-field input[type="date"]:focus,
+      .info-field select:focus {
+        outline: none;
+        border-bottom: 2px solid #5cb85c;
+      }
+
+      .container-1 {
+        height: 80px;
+      }
+      .container-1 label {
+        margin: 2px;
+      }
+      .gender-container {
+        display: flex;
+        /* justify-content: space-evenly; */
+        width: 100%;
+        margin: 0 2px;
+      }
+      .gender-container input[type="radio"] {
+        display: none;
+      }
+      .gender-container label {
+        flex: 1;
+        padding: 8px;
+        /* margin: 0 5px; */
+        text-align: center;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        cursor: pointer;
+        background-color: #f9f9f9;
+      }
+      .gender-container input[type="radio"]:checked + label {
+        background-color: green;
+        color: white;
+        border-color: green;
+      }
+
+      .container-2 {
+        height: 50px;
+      }
+      .container-2 label {
+        margin: 2px;
+      }
+      .buttons button {
+        width: 275px;
+        height: 40px;
+        border-color: gray;
+        border-radius: 2px;
+        transition: transform 0.2s;
+      }
+      .buttons button:hover {
+        background-color: green;
+        color: white;
+        border-color: green;
+      }
+      .buttons button:active {
+        transform: scale(0.8);
+        background-color: green;
+        color: white;
+        border-color: green;
+      }
+      
+    
+    </style>
+  </head>
+  <body>
+    <div id="fromContainer">
+      <div class="containerHeading">
+        <span class="interbiz">Interbiz</span>
+        <span>Already have an account? <span class="signin">Sign-In</span></span>
+      </div>
+
+      <form id="formId" class="formClass" target="_blank">
+        <div class="container">
+          <div class="info-field">
+            <label for="fnameID">First Name</label><br />
+            <input type="text" id="fnameID" name="fname" required/>
+          </div>
+          <div class="info-field">
+            <label for="lnameID">Last Name</label><br />
+            <input type="text" id="lnameID" name="lname" required/>
+          </div>
+        </div>
+
+        <div class="container-1">
+          <label for="Gender">Gender</label>
+          <div class="gender-container">
+            <input
+              type="radio"
+              id="maleID"
+              name="gender"
+              value="male"
+              required
+            />
+            <label for="maleID">Male</label>
+
+            <input
+              type="radio"
+              id="femaleID"
+              name="gender"
+              value="female"
+              required
+            />
+            <label for="femaleID">Female</label>
+
+            <input
+              type="radio"
+              id="otherID"
+              name="gender"
+              value="other"
+              required
+            />
+            <label for="otherID">Other</label>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="info-field">
+            <label for="phnID">Mobile No.</label><br />
+            <input type="tel" id="phnID" name="phnNo." pattern="[0-9]{10}" required/>
+          </div>
+          <div class="info-field">
+            <label for="emailID">Last Name</label><br />
+            <input type="email" id="emailID" name="email" required/>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="info-field">
+            <label for="dobID">Date of Birth</label><br />
+            <input type="date" id="dobID" name="dob" required/>
+          </div>
+          <div class="info-field">
+            <label for="subjectID">Subject:</label><br />
+            <select id="subjectID" name="subject" required>
+              <option value="">Select a subject</option>
+              <option value="HTML">HTML</option>
+              <option value="CSS">CSS</option>
+              <option value="Java">Java</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="info-field">
+            <label for="addressID">Address</label><br />
+            <input type="text" id="addressID" name="address" required/>
+          </div>
+          <div class="info-field">
+            <label for="pincodeID">Pin-Code</label><br />
+            <input
+              type="text"
+              id="pincodeID"
+              name="pincode"
+              pattern="[0-9]{6}"
+              title="Please enter a valid 6-digit PIN code"
+              maxlength="6"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="container-2">
+          <input type="checkbox" id="termsID" name="terms" required />
+          <label for="termsID">I agree to the terms and conditions</label><br />
+        </div>
+
+        <div class="container">
+          <div class="buttons">
+            <button type="button" onclick="submitForm()">Save</button>
+          </div>
+
+          <div class="buttons">
+            <!-- <input type="reset" value="Reset" /> -->
+            <button type="button" onclick="resetForm()">Reset</button>
+          </div>
+        </div>
+
+       
+        <script>
+          const submitForm = () => {
+            const form = document.getElementById("formId");
+            const formData = new FormData(form);
+            console.log(formData);
+
+            const data = {};
+            formData.forEach((value, key) => {
+              data[key] = value;
+            });
+            // console.log(data);
+
+            // data-object ko JSON-String mai badlenge
+            const jsonData = JSON.stringify(data);
+
+            //ab store karnege JSON-String ko local storage mai
+            localStorage.setItem("formData", jsonData);
+
+            console.log("Data saved to local storage:", jsonData);
+          };
+          const resetForm = ()=>{ document.getElementById('formId').reset(); }
+        </script>
+      </form>
+    </div>
+   
+  
+  </body>
+</html>

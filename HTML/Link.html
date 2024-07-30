@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Link</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+  
+        table,th,td{
+            border: 2px solid black;
+            border-collapse: collapse;
+            
+        }
+        table{
+            width: 50%;
+            margin: auto;
+            
+        }
+        tr,p{
+            text-align: center;
+        }
+        a:link{
+            color: green;
+        }
+        a:visited{
+            color: pink;
+        }
+        a:hover{
+            color: red;
+        }
+        a:active{
+            color: yellow;
+        }
+        img{
+            float:inline-end;
+        }
+     
+        
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Sequence</th>
+            <th>Site name</th>
+            <th>Site Link</th>
+            <th>Target Attribute</th>
+           
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>W3 School <i class="fa fa-car"></i></td>
+            <td><a href="https://www.w3schools.com/">W3 School</a></td>
+            <td>_self - Default Opens the document in the same window/tab as it was clicked</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>MDN Web Docs <i class="fa fa-file"></i></td>
+            <td><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a" target="_blank">MDN Web Docs</a></td>
+            <td>_blank - Opens the document in a new window or tab</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>geeksforgeeks <i class="fa fa-bars"></i></td>
+            <td><a href="https://www.geeksforgeeks.org/" target="_parent">geeksforgeeks</a></td>
+            <td>_parent - Opens the document in the parent frame</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Tutorials Tonight <i class="fa fa-cloud"></i></td>
+            <td><a href="https://www.tutorialstonight.com/" target="_top">Tutorial Tonight</a></td>
+            <td>_top - Opens the document in the full body of the window</td>
+        </tr>
+    </table>
+    <p><strong><span style="color:blue">Relative URL</span> :-  Full web addresses including protocol, domain, and path. Useful for linking between different websites or specifying resources precisely.</strong></p>
+    <p><strong><span style="color:orangered">Absolute URL</span>Absolute URL :- Specify resource location relative to the current page or domain. Shorter, more flexible, and ideal for linking within the same website</strong> </p>
+    <a href="https://www.google.co.in/"><img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png" alt="google" width="300px" height="153px" ></a>
+
+
+</body>
+</html>
